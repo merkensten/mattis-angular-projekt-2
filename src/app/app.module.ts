@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { AngularArkitekturComponent } from './pages/angular-arkitektur/angular-a
 import { TypescriptComponent } from './pages/typescript/typescript.component';
 import { WebbAppVsSpaComponent } from './pages/webb-app-vs-spa/webb-app-vs-spa.component';
 import { AngularComponent } from './pages/angular/angular.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { AngularComponent } from './pages/angular/angular.component';
     TypescriptComponent,
     WebbAppVsSpaComponent,
     AngularComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
