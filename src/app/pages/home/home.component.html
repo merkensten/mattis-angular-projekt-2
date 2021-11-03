@@ -1,7 +1,12 @@
 <div class="home-container">
   <div class="home-wrapper">
     <h1>Home Sidan</h1>
-    <button class="btn"><a routerLink="/home/kontakt">Kontakta Mig</a></button>
+    <button class="btn" *ngIf="getCurrentRoute() === '/home'">
+      <a routerLink="/home/kontakt">Kontakta Mig</a>
+    </button>
+    <button class="btn" *ngIf="getCurrentRoute() === '/home/kontakt'">
+      <a routerLink="/home">Stäng</a>
+    </button>
     <router-outlet></router-outlet>
   </div>
 </div>
