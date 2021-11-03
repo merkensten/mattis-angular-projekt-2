@@ -82,15 +82,20 @@ img {
 /* Buttons */
 
 .btn {
-  padding: 12px 20px;
   border: none;
   outline: none;
   border-radius: 50px;
   font-size: 1.6rem;
   background-color: rgb(26, 26, 26);
   cursor: pointer;
+  padding: 0;
 }
 
 .btn a {
   color: rgb(222, 222, 222);
+  padding: 12px 20px;
+}
+
+.active-link {
+  color: blue;
 }
