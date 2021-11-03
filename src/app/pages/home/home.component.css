@@ -1,6 +1,27 @@
 .home-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 50px;
+}
+
+.hero {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.main-wrapper {
+  margin-top: 50px;
+}
+
+.main-wrapper h2 {
+  text-align: center;
+}
+
+.button-wrapper {
+  margin: 20px 0;
 }

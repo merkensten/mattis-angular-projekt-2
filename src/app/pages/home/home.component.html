@@ -1,12 +1,38 @@
 <div class="home-container">
   <div class="home-wrapper">
-    <h1>Home Sidan</h1>
-    <button class="btn" *ngIf="getCurrentRoute() === '/home'">
-      <a routerLink="/home/kontakt">Kontakta Mig</a>
-    </button>
-    <button class="btn" *ngIf="getCurrentRoute() === '/home/kontakt'">
-      <a routerLink="/home">Stäng</a>
-    </button>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Info om mig Mattis Erkensten</h1>
+      </div>
+      <div class="hero-img">
+        <img src="../../../assets/images/home-illustration.svg" alt="" />
+      </div>
+    </div>
+    <main class="main-wrapper">
+      <h2>Info</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, odio
+        eius. Ex praesentium repudiandae voluptates? Quis vero in, suscipit, sit
+        eum id ullam totam, aliquam nemo neque non vel! Repellendus cum sint
+        provident quis architecto numquam minus nulla repudiandae illum!
+      </p>
+    </main>
+
+    <div class="button-wrapper">
+      <a
+        class="btn"
+        *ngIf="getCurrentRoute() === '/home'"
+        routerLink="/home/kontakt"
+        >Kontakta Mig</a
+      >
+      <a
+        class="btn"
+        *ngIf="getCurrentRoute() === '/home/kontakt'"
+        routerLink="/home"
+        >Stäng</a
+      >
+    </div>
+
     <router-outlet></router-outlet>
   </div>
 </div>
