@@ -13,7 +13,7 @@ import { TypescriptComponent } from './pages/typescript/typescript.component';
 import { WebbAppVsSpaComponent } from './pages/webb-app-vs-spa/webb-app-vs-spa.component';
 import { AngularComponent } from './pages/angular/angular.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { MattisTextComponent } from './shared/components/mattis-text/mattis-text.component';
+import { KontaktComponent } from './core/kontakt/kontakt.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { MattisTextComponent } from './shared/components/mattis-text/mattis-text
     WebbAppVsSpaComponent,
     AngularComponent,
     PageNotFoundComponent,
-    MattisTextComponent,
+    KontaktComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

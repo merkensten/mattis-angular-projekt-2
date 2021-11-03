@@ -7,13 +7,13 @@ import { SpaComponent } from './pages/spa/spa.component';
 import { AngularArkitekturComponent } from './pages/angular-arkitektur/angular-arkitektur.component';
 import { TypescriptComponent } from './pages/typescript/typescript.component';
 import { WebbAppVsSpaComponent } from './pages/webb-app-vs-spa/webb-app-vs-spa.component';
-import { MattisTextComponent } from './shared/components/mattis-text/mattis-text.component';
+import { KontaktComponent } from './core/kontakt/kontakt.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    children: [{ path: 'text', component: MattisTextComponent }],
+    children: [{ path: 'kontakt', component: KontaktComponent }],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'angular', component: AngularComponent },
