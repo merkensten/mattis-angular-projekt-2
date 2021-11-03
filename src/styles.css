@@ -78,3 +78,18 @@ a {
 img {
   width: 100%;
 }
+
+/* Buttons */
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  background-color: rgb(26, 26, 26);
+}
+
+.btn a {
+  color: rgb(222, 222, 222);
+}
