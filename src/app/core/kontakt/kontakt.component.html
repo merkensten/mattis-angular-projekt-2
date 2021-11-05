@@ -1,4 +1,12 @@
 <div class="kontakt-wrapper">
+  <div class="button-wrapper">
+    <a
+      class="btn"
+      *ngIf="getCurrentRoute() === '/home/kontakt'"
+      routerLink="/home"
+      >Stäng Formuläret</a
+    >
+  </div>
   <h2>Kontakta Mig</h2>
 
   <form action="">
