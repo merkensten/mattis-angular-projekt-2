@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-kontakt',
@@ -12,5 +13,12 @@ export class KontaktComponent implements OnInit {
 
   public getCurrentRoute() {
     return window.location.pathname;
+  }
+
+  onSubmit(f: NgForm) {
+    const formData = f.value;
+    console.log(
+      `Nytt meddelande från kontakforumläret - Namn : ${formData.namn}, Email: ${formData.email}, Meddelande: ${formData.message}`
+    );
   }
 }

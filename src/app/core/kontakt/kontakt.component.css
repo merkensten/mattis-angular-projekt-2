@@ -20,7 +20,7 @@ input + input {
   margin-top: 10px;
 }
 
-input[type="button"] {
+input[type="submit"] {
   background-color: #000;
   color: #fff;
   cursor: pointer;
