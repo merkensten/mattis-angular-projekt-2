@@ -9,13 +9,14 @@ import { TextService } from '../../text.service';
 })
 export class HomeComponent {
   constructor(private textService: TextService) {}
+  id = 0;
   content = {
-    title: this.textService.TextData[0].title,
-    h2: this.textService.TextData[0].heading2,
-    p1: this.textService.TextData[0].paragraph1,
-    p2: this.textService.TextData[0].paragraph2,
-    p3: this.textService.TextData[0].paragraph3,
-    img: this.textService.TextData[0].img,
+    title: this.textService.TextData[this.id].title,
+    h2: this.textService.TextData[this.id].heading2,
+    p1: this.textService.TextData[this.id].paragraph1,
+    p2: this.textService.TextData[this.id].paragraph2,
+    p3: this.textService.TextData[this.id].paragraph3,
+    img: this.textService.TextData[this.id].img,
   };
 
   public getCurrentRoute() {
@@ -24,11 +25,10 @@ export class HomeComponent {
 
   onChangeText(f: NgForm) {
     const formData = f.value;
-    console.log(formData);
-    this.content.title = formData.text;
+    this.textService.setNewTitle(formData, this.content);
   }
 
   onResetText() {
-    this.content.title = this.textService.TextData[0].title;
+    this.textService.resetTitle(this.content, this.id);
   }
 }

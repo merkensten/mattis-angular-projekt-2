@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { TextService } from '../../text.service';
 
 @Component({
   selector: 'app-spa',
   templateUrl: './spa.component.html',
-  styleUrls: ['./spa.component.css']
+  styleUrls: ['./spa.component.css'],
 })
-export class SpaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SpaComponent {
+  constructor(private textService: TextService) {}
+  id = 2;
+  content = {
+    title: this.textService.TextData[this.id].title,
+    p1: this.textService.TextData[this.id].paragraph1,
+    p2: this.textService.TextData[this.id].paragraph2,
+    p3: this.textService.TextData[this.id].paragraph3,
+  };
 }

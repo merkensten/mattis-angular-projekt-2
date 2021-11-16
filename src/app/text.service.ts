@@ -8,7 +8,7 @@ export class TextService {
 
   TextData = [
     {
-      id: 1,
+      id: 0,
       title: 'Info om Mig Mattis Erkensten',
       heading2: 'Info',
       paragraph1:
@@ -20,7 +20,7 @@ export class TextService {
       img: '../assets/images/home-illustration.svg',
     },
     {
-      id: 2,
+      id: 1,
       title: '1. Förklara vad Angular är och varför det används',
       paragraph1:
         'Angular är ett av de största ramverken för JavaScript. Angular är open-source och det är Google som underhåller det.',
@@ -30,7 +30,7 @@ export class TextService {
         'Genom att man använder sig av Angular så får man en grundstruktur för en webbapplikation och det gör livet lite enklare för oss utvecklare då man slipper tänka på de alla de delarna utan man kan gå vidare och strukturera upp resterande delar efter egen vilja.',
     },
     {
-      id: 3,
+      id: 2,
       title: '2. Förklara vad Single Page Applications är',
       paragraph1:
         'En Single Page Application (SPA) är kortfattat så som det låter, det är en applikation som endast har en html sida. Det innebär att man hämtar in grunden för applikationen vid första inladdningen av sidan och sedan kan nytt innehåll renderas ut dynamiskt.',
@@ -38,7 +38,7 @@ export class TextService {
         'Med en SPA kan webbläsaren rendera om utvalda delar på en html sida medans en traditionell web app måste rendera om hela sidan. Genom att en SPA kan rendera ut enskilda delar på en sida blir en SPA app väldigt snabb då man bara laddar om det som behövs.',
     },
     {
-      id: 4,
+      id: 3,
       title:
         '3. Beskriv de fundamentala delarna i Angulars arkitektur (rita gärna beskrivande)',
       paragraph0:
@@ -75,7 +75,7 @@ export class TextService {
       img3: '../assets/images/angular-data-binding.png',
     },
     {
-      id: 5,
+      id: 4,
       title:
         '4. Redogör för vad TypeScript är och dess syfte (varför vill vi använda typescript)',
       paragraph1:
@@ -88,7 +88,7 @@ export class TextService {
         'TypeScript ger också mer hjälp när man skriver kod då TypeScript har en bra intellisens och TypeScript känner också av när man har skrivit något fel och då får man ett meddelande så man kan ändra sin kod vilket gör att buggar upptäcks mycket tidigare med TypeScript än med Vanilla JavaScript.',
     },
     {
-      id: 6,
+      id: 5,
       title:
         '5. Förklara skillnaden mellan att utveckla en webbapplikation som en single page application med Angular eller som en “traditionell” webbapplikation',
       paragraph1:
@@ -99,4 +99,12 @@ export class TextService {
         'Den största skillnaden med att skapa en webbapp med angular jämfört med det traditionella sättet är att vid en traditionell applikation så behöver mycket kod kopieras in till varje enskild sida och hur man importerar JavaScript filerna kan skapa problem medans Angular tar hand om detta åt oss som utvecklare.',
     },
   ];
+
+  setNewTitle(inputText: any, textObj: any) {
+    textObj.title = inputText.text;
+  }
+
+  resetTitle(textObj: any, id: number) {
+    textObj.title = this.TextData[id].title;
+  }
 }
