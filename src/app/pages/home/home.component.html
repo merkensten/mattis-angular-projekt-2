@@ -2,35 +2,34 @@
   <div class="home-wrapper">
     <div class="hero">
       <div class="hero-content">
-        <h1>Info om mig Mattis Erkensten</h1>
+        <h1>{{ content.title }}</h1>
+        <form #f="ngForm" (ngSubmit)="onChangeText(f)" novalidate>
+          <input
+            type="text"
+            name="text"
+            ngModel
+            required
+            #first="ngModel"
+            placeholder="Ändra på titeln..."
+          />
+          <button type="submit">Ändra text</button>
+        </form>
+        <button (click)="onResetText()">Återställ text</button>
       </div>
       <div class="hero-img">
-        <img src="../../../assets/images/home-illustration.svg" alt="" />
+        <img src="{{ content.img }}" alt="" />
       </div>
     </div>
     <main class="main-wrapper">
-      <h2>Info</h2>
+      <h2>{{ content.h2 }}</h2>
       <p>
-        Hej! Mitt namn är Mattis och jag är en kille på 24 år, just nu går jag
-        utbildningen Front-End på skolan EC-Utbildning. Tidigare har jag en
-        examen på en tvåårig utbildning inom E-handel. Jag har också två examens
-        från korta yh utbildningar den första var inom frontend och den andra
-        var Full stack JavaScript med React och Node.js. Just nu går jag också
-        en kort yh inom Maskininlärning / AI med Python.
+        {{ content.p1 }}
       </p>
       <p>
-        Utöver plugget så har jag ett företag där jag arbetar med att bygga
-        webbplatser åt andra och jag har också egna projekt inom affiliate
-        marknadsföring. Dock är denna verksamhet inte jätteaktiv just nu då jag
-        fokuserar på plugget. Innan jag började plugga inom front-end så byggde
-        jag webbplatser med wordpress och de sidbyggare som finns tillgängliga
-        att använda där. Jag insåg ganska snabbt att om man vill bygga något som
-        är riktigt nice så måste man lära sig sakerna från grunden och nyttja de
-        bästa verktygen. Det är anledningen till att jag pluggar det jag gör.
+        {{ content.p2 }}
       </p>
       <p>
-        På friditen så spelar jag en del Golf och har gjort det sedan 2008, jag
-        tycker också om att idrotta och ibland så spelar jag lite tv-spel.
+        {{ content.p3 }}
       </p>
     </main>
 
