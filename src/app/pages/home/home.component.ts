@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TextData } from '../../shared/text-data';
 import { NgForm } from '@angular/forms';
+import { TextService } from '../../text.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,14 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  constructor(private textService: TextService) {}
   content = {
-    title: TextData[0].title,
-    h2: TextData[0].heading2,
-    p1: TextData[0].paragraph1,
-    p2: TextData[0].paragraph2,
-    p3: TextData[0].paragraph3,
-    img: TextData[0].img,
+    title: this.textService.TextData[0].title,
+    h2: this.textService.TextData[0].heading2,
+    p1: this.textService.TextData[0].paragraph1,
+    p2: this.textService.TextData[0].paragraph2,
+    p3: this.textService.TextData[0].paragraph3,
+    img: this.textService.TextData[0].img,
   };
 
   public getCurrentRoute() {
@@ -28,6 +29,6 @@ export class HomeComponent {
   }
 
   onResetText() {
-    this.content.title = TextData[0].title;
+    this.content.title = this.textService.TextData[0].title;
   }
 }
