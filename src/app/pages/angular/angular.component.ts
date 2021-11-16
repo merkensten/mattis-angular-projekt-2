@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TextService } from '../../text.service';
 @Component({
   selector: 'app-angular',
@@ -7,6 +7,7 @@ import { TextService } from '../../text.service';
 })
 export class AngularComponent {
   constructor(private textService: TextService) {}
+
   id = 1;
   content = {
     title: this.textService.TextData[this.id].title,
