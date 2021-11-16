@@ -6,11 +6,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './kontakt.component.html',
   styleUrls: ['./kontakt.component.css'],
 })
-export class KontaktComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-
+export class KontaktComponent {
   public getCurrentRoute() {
     return window.location.pathname;
   }
