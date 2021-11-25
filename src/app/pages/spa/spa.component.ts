@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TextService } from '../../text.service';
 
 @Component({
@@ -13,6 +13,5 @@ export class SpaComponent {
     title: this.textService.TextData[this.id].title,
     p1: this.textService.TextData[this.id].paragraph1,
     p2: this.textService.TextData[this.id].paragraph2,
-    p3: this.textService.TextData[this.id].paragraph3,
   };
 }

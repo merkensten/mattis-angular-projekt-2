@@ -14,5 +14,6 @@ export class TypescriptComponent {
     p1: this.textService.TextData[this.id].paragraph1,
     p2: this.textService.TextData[this.id].paragraph2,
     p3: this.textService.TextData[this.id].paragraph3,
+    p4: this.textService.TextData[this.id].paragraph4,
   };
 }
