@@ -111,3 +111,35 @@ img {
 .page-title {
   margin-bottom: 25px;
 }
+
+.custom-input {
+  font-size: 18px;
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  outline: none;
+  color: rgb(65, 65, 65);
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+.custom-btn {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  background-color: rgb(90, 90, 90);
+  cursor: pointer;
+  padding: 0;
+  padding: 12px 20px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.custom-btn:hover {
+  background-color: rgb(26, 26, 26);
+}

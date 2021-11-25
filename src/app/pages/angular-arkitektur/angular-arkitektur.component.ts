@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { TextService } from '../../text.service';
 
 @Component({
@@ -34,4 +35,13 @@ export class AngularArkitekturComponent {
     img2: this.textService.TextData[this.id].img2,
     img3: this.textService.TextData[this.id].img3,
   };
+
+  onChangeText(f: NgForm) {
+    const formData = f.value;
+    this.textService.setNewTitle(formData, this.content);
+  }
+
+  onResetText() {
+    this.textService.resetTitle(this.content, this.id);
+  }
 }

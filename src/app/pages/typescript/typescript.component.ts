@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { TextService } from '../../text.service';
 
 @Component({
@@ -16,4 +17,13 @@ export class TypescriptComponent {
     p3: this.textService.TextData[this.id].paragraph3,
     p4: this.textService.TextData[this.id].paragraph4,
   };
+
+  onChangeText(f: NgForm) {
+    const formData = f.value;
+    this.textService.setNewTitle(formData, this.content);
+  }
+
+  onResetText() {
+    this.textService.resetTitle(this.content, this.id);
+  }
 }
