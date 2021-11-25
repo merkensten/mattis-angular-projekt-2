@@ -1,32 +1,32 @@
 <div class="page-wrapper">
   <div class="page-title">
     <h2>
-      5. Förklara skillnaden mellan att utveckla en webbapplikation som en
-      single page application med Angular eller som en “traditionell”
-      webbapplikation
+      {{content.title}}
     </h2>
+    <form #f="ngForm" (ngSubmit)="onChangeText(f)" novalidate>
+      <input
+        type="text"
+        name="text"
+        ngModel
+        required
+        #first="ngModel"
+        placeholder="Ändra på titeln..."
+        value="{{ content.title }}"
+        class="custom-input"
+      />
+      <button class="custom-btn" type="submit">Ändra text</button>
+    </form>
+    <button class="custom-btn" (click)="onResetText()">Återställ text</button>
   </div>
 
   <p>
-    Skillnaden mellan att utveckla en webbapplikation med Angular jämfört med en
-    traditionell webbapplikation är att med Angular får man ett tydligt
-    arbetssätt på hur man skall gå tillväga när man skapar en webbapplikation.
-    Med det traditionella sättet så sitter man med vanliga filer och då är man
-    låst i hur vanilla teknikerna jobbar.
+    {{content.p1}}
   </p>
   <p>
-    Angular är uppbyggt på ett komponentbaserat sätt där grundkonceptet går ut
-    på att dela upp koden i så många komponenter som är önskvärt. Detta är något
-    som man kan göra till viss del med en traditionell webbapp men då behöver
-    man manuellt kopiera in kod på varje enskild sida medans man med angular kan
-    välja att exempelvis en header skall synas på alla sidor och då är det bara
-    på ett ställe som man lägger till taggen för komponenten.
+    {{content.p2}}
   </p>
   <p>
-    Den största skillnaden med att skapa en webbapp med angular jämfört med det
-    traditionella sättet är att vid en traditionell applikation så behöver
-    mycket kod kopieras in till varje enskild sida och hur man importerar
-    JavaScript filerna kan skapa problem medans Angular tar hand om detta åt oss
-    som utvecklare.
+    {{content.p3}}
   </p>
+
 </div>

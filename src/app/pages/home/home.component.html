@@ -12,10 +12,11 @@
             #first="ngModel"
             placeholder="Ändra på titeln..."
             value="{{content.title}}"
+            class="custom-input"
           />
-          <button type="submit">Ändra text</button>
+          <button class="custom-btn" type="submit">Ändra text</button>
         </form>
-        <button (click)="onResetText()">Återställ text</button>
+        <button class="custom-btn"(click)="onResetText()">Återställ text</button>
       </div>
       <div class="hero-img">
         <img src="{{ content.img }}" alt="" />

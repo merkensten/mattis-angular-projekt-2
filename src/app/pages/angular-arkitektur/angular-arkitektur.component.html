@@ -1,106 +1,86 @@
 <div class="page-wrapper">
   <div class="page-title">
-    <h2>
-      3. Beskriv de fundamentala delarna i Angulars arkitektur (rita gärna
-      beskrivande)
-    </h2>
+    <h2>{{ content.title }}</h2>
+    <form #f="ngForm" (ngSubmit)="onChangeText(f)" novalidate>
+      <input
+        type="text"
+        name="text"
+        ngModel
+        required
+        #first="ngModel"
+        placeholder="Ändra på titeln..."
+        value="{{content.title}}"
+        class="custom-input"
+      />
+      <button class="custom-btn" type="submit">Ändra text</button>
+    </form>
+    <button class="custom-btn"(click)="onResetText()">Återställ text</button>
   </div>
 
   <div class="hero-img">
-    <img src="../../../assets/images/angular-arkitektur.png" alt="" />
+    <img src="{{ content.img1 }}" alt="" />
   </div>
 
-  <p>
-    Bilden ovan är från Angular dokumentation kring Angulars Arkitektur och den
-    beskriver Angulars fundamentala delar kring arkitekturen. Nedan kommer jag
-    förklara lite kring varje del
-  </p>
+  <p>{{ content.p0 }}</p>
 
   <div class="content-section">
-    <h3>Modules</h3>
+    <h3>{{ content.s1 }}</h3>
     <p>
-      Det mest fundamentala i Angular är modules. Varje angular app har en
-      root-module, när man skapar en angular app med ng new kallas root modulen
-      för AppModule. Det är den modulen som är grunden för hela appen. Man kan
-      skapa flera moduler i Angular men varje ny modul behöver registreras i
-      AppModulen. För att skapa en modul använder man sig av @NgModule()
-      funktionen.
+      {{ content.p1 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Angular Libraries</h3>
+    <h3>{{ content.s2 }}</h3>
     <p>
-      Angular använder sig av flertalet JavaScript moduler. Det är dessa som man
-      importerar med @angular prefixen. Det är genom dessa moduler som man
-      importerar in som man får tillgång till den funktionalitet som Angular
-      tillhandahåller.
+      {{ content.p2 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Components</h3>
+    <h3>{{ content.s3 }}</h3>
     <p>
-      Varje Angular projekt innehåller minst en komponent och det är
-      komponenterna som i princip bygger upp allt som renderas ut i webbläsaren.
-      Man kan säga att hela syftet med att använda sig av Angular är för att
-      kunna använda sig av komponenter.
+      {{ content.p3 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Templates</h3>
+    <h3>{{ content.s4 }}</h3>
     <p>
-      Det är templates i Angular som kopplar samman html koden med Angular
-      koden. Template säger sedan till hur Angular skall rendera ut koden i
-      DOMen.
+      {{ content.p4 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Metadata</h3>
+    <h3>{{ content.s5 }}</h3>
     <p>
-      Metadata används för att berätta hur Angular skall processa en klass.
-      Metadata används för att konfigurera det väntade beteendet hos en klass.
-      Här är ett exempel på metadata som används för att dekorera en klass:
+      {{ content.p5 }}
+    </p>
+    <img src="{{ content.img2 }}" alt="En bild av metadata i Angular" />
+  </div>
+  <div class="content-section">
+    <h3>{{ content.s6 }}</h3>
+    <p>
+      {{ content.p6 }}
     </p>
     <img
-      src="../../../assets/images/angular-metadata.png"
-      alt="En bild av metadata i Angular"
-    />
-  </div>
-  <div class="content-section">
-    <h3>Data Binding</h3>
-    <p>
-      Data Bindning spelar en viktig roll för hur Angular kan kommunicera mellan
-      templates & komponenter men även för child och parent komponenter.
-    </p>
-    <p>I Angular finns det fyra olika sätt att skicka värden och de är:</p>
-    <img
-      src="../../../assets/images/angular-data-binding.png"
+      src="{{ content.img3 }}"
       alt="En bild av metoder för att skicka data i Angular"
       style="width: 30%"
     />
   </div>
   <div class="content-section">
-    <h3>Directives</h3>
+    <h3>{{ content.s7 }}</h3>
     <p>
-      Directives i Angular är det som egentligen säger åt en komponent hur den
-      skall skapas. Det är direktivet som kopplar samman komponenten till DOMen.
+      {{ content.p7 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Services</h3>
+    <h3>{{ content.s8 }}</h3>
     <p>
-      Services är det som man i Angular använder sig av när man vill att logik
-      eller data skall vara tillgängliga för flera komponenter eller till och
-      med hela applikationen. Genom att använda sig av services kan man minimera
-      mängden duplicerad kod och därmed följa DRY principen.
+      {{ content.p8 }}
     </p>
   </div>
   <div class="content-section">
-    <h3>Dependency Injections</h3>
+    <h3>{{ content.s9 }}</h3>
     <p>
-      Dependency Injections tillhandahåller services till en komponent,
-      dependency injections tillhandahåller bara de services som en komponent
-      behöver. En vanlig service som dependency injections tillhandahåller till
-      komponenterna är Routing.
+      {{ content.p9 }}
     </p>
   </div>
 </div>
